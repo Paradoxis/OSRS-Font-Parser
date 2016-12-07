@@ -1,0 +1,240 @@
+@import "./font/stylesheet.css";
+
+.os-font {
+    font-family: "Runescape Chat Font Regular";
+    text-shadow: 1px 1px 0px black;
+}
+.os-font.os-font-yellow {
+    color: #FFFF00;
+}
+.os-font.os-font-green {
+    color: #00FF00;
+}
+.os-font.os-font-white {
+    color: #FFFFFF;
+}
+.os-font.os-font-red {
+    color: #FF0000;
+}
+.os-font.os-font-cyan {
+    color: #00FFFF;
+}
+.os-font.os-font-purple {
+    color: #FF00FF;
+}
+
+/* glow1: 3s total, red -> yellow -> cyan */
+@keyframes glow1 {
+    0% {
+        color: #FF0000;
+    }
+    50% {
+        color: #FFFF00;
+    }
+    100% {
+        color: #00FFFF;
+    }
+}
+.os-font.os-font-glow1 {
+    color: #FF0000;
+    animation: glow1 3s infinite;
+}
+
+/* glow2: 3s total, red -> (purple ->) blue -> red */
+@keyframes glow2 {
+    0% {
+        color: #FF0000;
+    }
+    33% {
+        color: #FF00FF
+    }
+    66% {
+        color: #0000FF;
+    }
+    100% {
+        color: #FF0000;
+    }
+}
+.os-font.os-font-glow2 {
+    color: #FF0000;
+    animation: glow2 3s infinite;
+}
+
+/* glow3: 3s total, white -> green -> white -> cyan */
+@keyframes glow3 {
+    0% {
+        color: #FFFFFF;
+    }
+    33% {
+        color: #00FF00;
+    }
+    66% {
+        color: #FFFFFF;
+    }
+    100% {
+        color: #00FFFF;
+    }
+}
+.os-font.os-font-glow3 {
+    color: #FFFFFF;
+    animation: glow3 3s infinite;
+}
+
+/* flash1: 0.5s total, red -> yellow */
+@keyframes flash1 {
+    0% {
+        color: #FF0000;
+    }
+    50% {
+        color: #FF0000;
+    }
+    50.01% {
+        color: #FFFF00;
+    }
+    100% {
+        color: #FFFF00;
+    }
+}
+.os-font.os-font-flash1 {
+    color: #FF0000;
+    animation: flash1 0.5s infinite;
+}
+
+/* flash1: 0.5s total, cyan -> blue */
+@keyframes flash2 {
+    0% {
+        color: #00FFFF;
+    }
+    50% {
+        color: #00FFFF;
+    }
+    50.01% {
+        color: #0000FF;
+    }
+    100% {
+        color: #0000FF;
+    }
+}
+.os-font.os-font-flash2 {
+    color: #00FFFF;
+    animation: flash2 0.5s infinite;
+}
+
+/* flash3: 0.5s total, light green -> dark green */
+@keyframes flash3 {
+    0% {
+        color: #80FF80;
+    }
+    50% {
+        color: #80FF80;
+    }
+    50.01% {
+        color: #00B000;
+    }
+    100% {
+        color: #00B000;
+    }
+}
+.os-font.os-font-flash3 {
+    color: #80FF80;
+    animation: flash3 0.5s infinite;
+}
+
+/* individual letters */
+.os-font.os-font-spanified span {
+    position: relative;
+}
+
+/* wave: 1s total, up -> down */
+@keyframes wave {
+    0% {
+        top: -3px;
+    }
+    100% {
+        top: 3px;
+    }
+}
+.os-font.os-font-wave span {
+    animation: wave 0.35s ease-in-out infinite alternate;
+}
+
+/* wave2: 1s total, up, right -> down, left */
+@keyframes wave2 {
+    0% {
+        top: -2px;
+        right: -2.25px;
+    }
+    100% {
+        top: 2px;
+        right: 2.25px;
+    }
+}
+.os-font.os-font-wave2 span {
+    animation: wave2 0.35s ease-in-out infinite alternate;
+}
+
+/* shake: 1s total, up, right -> down, left */
+@keyframes shake {
+    0% {
+        top: -6px;
+    }
+    5% {
+        top: 6px;
+    }
+
+    10% {
+        top: -3px;
+    }
+    15% {
+        top: 3px;
+    }
+
+    20%, 100% {
+        top: 0px;
+    }
+}
+.os-font.os-font-shake span {
+    animation: shake 1s ease-in infinite;
+}
+
+/* Scrollable wrapper */
+.os-font .os-font-scrollable-wrapper {
+    white-space: nowrap;
+    overflow: hidden;
+}
+.os-font .os-font-scrollable-wrapper .os-font-scrollable {
+    position: relative;
+}
+
+/* scroll: left -> right (150px) */
+@keyframes scroll {
+    0% {
+        left: 150px;        
+    }
+    80%, 100% {
+        left: calc(-100% - 150px);
+    }
+}
+.os-font.os-font-scroll .os-font-scrollable-wrapper {
+    width: 150px;
+}
+.os-font.os-font-scroll .os-font-scrollable-wrapper .os-font-scrollable {
+    left: 150px;
+    animation: scroll 5s linear infinite;
+}
+
+/* slide: left -> right (150px) */
+@keyframes slide {
+    0% {
+        top: -100px;        
+    }
+    33%, 66% {
+        top: 0px;
+    }
+    100% {
+        top: 100px;
+    }
+}
+.os-font.os-font-slide .os-font-scrollable-wrapper .os-font-scrollable {
+    animation: slide 3s linear infinite;
+}
