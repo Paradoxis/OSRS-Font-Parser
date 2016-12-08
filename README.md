@@ -1,8 +1,28 @@
 # OSRS-Font-Parser
-Make your website relive your nerdy childhood
+![Make your website relive your nerdy childhood](https://raw.githubusercontent.com/Paradoxis/OSRS-Font-Parser/master/images/preview.gif)
 
 ## Live demo
 Click [here](https://paradoxis.github.io/OSRS-Font-Parser/) for the live demo
+
+## Download method #1
+Press this big ol' button
+
+[![Download](https://raw.githubusercontent.com/Paradoxis/OSRS-Font-Parser/master/images/button.png)](https://github.com/Paradoxis/OS-Font/archive/master.zip)
+
+## Download method #2
+Clone the code using git, nice
+    
+    $ git clone git@github.com:Paradoxis/OS-Font.git
+    
+## Download method #3
+Download the code using wget (linux, nice)
+
+    $ wget https://github.com/Paradoxis/OS-Font/archive/master.zip
+    
+## Download method #4
+Download the code using curl (we get it, you're a l33t hacker)
+
+    $ curl -D OS-Font.zip https://github.com/Paradoxis/OS-Font/archive/master.zip
 
 ## Installation 
 This part separates the noobs from the maxed mains
