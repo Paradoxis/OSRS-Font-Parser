@@ -245,6 +245,18 @@
     }
 
     /**
+     * Get an effect from an element's text content
+     * To do this, a regex is passed and the first (1) instance is returned 
+     * @param {Object} element 
+     * @param {RegExp} regex 
+     * @returns {String}
+     */
+    function getEffectFromElement(element, regex)
+    {
+        return element.textContent.match(regex)[1].replace(":", "").toLowerCase() || "";
+    }
+
+    /**
      * Main entry point of the script 
      * If no parent is given, the document will be assumed
      * @param {Object} parent
@@ -253,11 +265,11 @@
     function compile(parent)
     {
         getParagraphsContainingText(REGEX_FIND_COLOURS, parent).forEach(element => {
-            processColorEffect(element, element.textContent.match(REGEX_FIND_COLOURS)[1].replace(":", ""));
+            processColorEffect(element, getEffectFromElement(element, REGEX_FIND_COLOURS));
         });
 
         getParagraphsContainingText(REGEX_FIND_ANIMATIONS, parent).forEach(element => {
-            processAnimationEffect(element, element.textContent.match(REGEX_FIND_ANIMATIONS)[1].replace(":", ""));
+            processAnimationEffect(element, getEffectFromElement(element, REGEX_FIND_ANIMATIONS));
         });
     }
 
