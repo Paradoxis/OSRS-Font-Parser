@@ -28,7 +28,7 @@ Download the code using curl (we get it, you're a l33t hacker)
 This part separates the noobs from the maxed mains
 
 1. Extract the contents of the zip file into a directory of choice.
-2. Cope all the files from `src/` to a directory in your public webroot.
+2. Copy all the files from `src/` to a directory in your public webroot.
 3. Make a link to `os-font.css` at the bottom of your `<head>` tag
 4. Make a link to `os-font.js` at the bottom of your `<body>` tag
 5. Initialize the OsFont library by calling `OsFont.compile()` after loading the library
